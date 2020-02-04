@@ -1,5 +1,5 @@
 const postQuery = `{
-  properties: allInternalPosts {
+  properties: allInternalPosts(filter: {geo: {lat: {ne: null}}}) {
     edges{
       node{
         mlsId
@@ -8,6 +8,17 @@ const postQuery = `{
         }
         photos
         listPrice
+        listDate(formatString: "MMM, d, Y")
+        geo {
+          lat
+          lng
+        }
+        property {
+          bedrooms
+          bathsFull
+          bathsHalf
+          area
+        }
       }
     }
   }
@@ -23,7 +34,13 @@ const flatten = arr =>
 const queries = [
   {
     query: postQuery,
-    transformer: ({ data }) => flatten(data.properties.edges),
+    transformer: ({ data }) => {
+      data.properties.edges.map(hit => {
+        hit.node._geoloc = hit.node.geo
+        console.log(hit.node)
+      })
+      return flatten(data.properties.edges)
+    },
     indexName: `Properties`,
   },
 ]
