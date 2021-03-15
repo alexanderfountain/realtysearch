@@ -29,8 +29,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
-        appId: "K9LG7KOA5G",
-        apiKey: "444b1d03e0452bc8612d578a2f2261f0",
+        appId: "7BPDVMONJB",
+        apiKey: "97add9bbd00c42dd15b3021775bb2314",
         queries,
         chunkSize: 10000, // default: 1000
       },

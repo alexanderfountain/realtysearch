@@ -1,4 +1,5 @@
 import algoliasearch from "algoliasearch/lite"
+import { graphql, Link } from "gatsby"
 import {
   InstantSearch,
   ClearRefinements,
@@ -29,8 +30,8 @@ import styled from "styled-components"
 import logo from "../images/logo.png"
 
 const searchClient = algoliasearch(
-  "K9LG7KOA5G",
-  "444b1d03e0452bc8612d578a2f2261f0"
+  "7BPDVMONJB",
+  "e5d1acf1e1db1917a80bebafd9f6fad0"
 )
 
 const HtmlTooltip = withStyles(theme => ({
@@ -290,7 +291,7 @@ function Map() {
     <Fragment>
       <div className="map">
         <GoogleMapsLoader
-          apiKey="AIzaSyAYtZxS3vCaL-IkVVVsdSThFIZ_J40OPf4"
+          apiKey="AIzaSyBiuF0-vcKuklxRVp0NeUuZwDUZikt0W1c"
           endpoint="https://maps.googleapis.com/maps/api/js?v=weekly"
         >
           {google => (
@@ -325,8 +326,9 @@ const MyHits = connectHits(({ hits }) => {
 })
 
 function HitComponent({ hit }) {
+  console.log(hit)
   return (
-    <div className="hit">
+    <Link to={"/property/"+hit.mlsId} className="hit">
       {/* <div className="pictures-wrapper">
         <img className="picture" alt={hit.name} src={hit.picture_url} />
         <img
@@ -352,7 +354,7 @@ function HitComponent({ hit }) {
         </div>
       </div>
       <div className="address">{hit.full}</div>
-    </div>
+    </Link>
   )
 }
 
