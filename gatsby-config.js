@@ -68,7 +68,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-remote-images`,
+      resolve: require.resolve(`./src/modulefix/gatsby-plugin-remote-images`),
       options: {
         nodeType: "internal__posts",
         // Making this plural (optional).
