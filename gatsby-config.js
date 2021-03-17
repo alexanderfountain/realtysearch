@@ -1,6 +1,26 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+// Lets assume this is the data from your API:
+const exampleDataFromApi = [
+  {
+    url: "post-1",
+    images: [
+      {
+        url: "image-1.jpg",
+        modified: 1556752476267,
+      },
+      {
+        url: "image-2.jpg",
+        modified: 1556752702168,
+      },
+    ],
+    author: {
+      firstname: "John",
+      lastname: "Doe",
+    },
+  },
+]
 const postType = {
   id: 1,
   name: "String",
@@ -45,6 +65,18 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: "internal__posts",
+        // Making this plural (optional).
+        name: "localImages",
+        // Path to the leaf node.
+        imagePath: "photos",
+        // Set type to array.
+        type: "array",
       },
     },
     {

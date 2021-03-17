@@ -6,6 +6,24 @@ const postQuery = `{
         address {
           full
         }
+        localImages {
+          childrenImageSharp {
+            fluid {
+              aspectRatio
+              base64
+              originalImg
+              originalName
+              presentationHeight
+              presentationWidth
+              sizes
+              src
+              srcSet
+              srcSetWebp
+              srcWebp
+              tracedSVG
+            }
+          }
+        }
         photos
         listPrice
         listDate(formatString: "MMM, d, Y")

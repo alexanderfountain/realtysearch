@@ -28,6 +28,7 @@ import Fade from "@material-ui/core/Fade"
 import "./front.css"
 import styled from "styled-components"
 import logo from "../images/logo.png"
+import Img from "gatsby-image"
 
 const searchClient = algoliasearch(
   "7BPDVMONJB",
@@ -328,7 +329,7 @@ const MyHits = connectHits(({ hits }) => {
 function HitComponent({ hit }) {
   console.log(hit)
   return (
-    <Link to={"/property/"+hit.mlsId} className="hit">
+    <Link to={"/property/" + hit.mlsId} className="hit">
       {/* <div className="pictures-wrapper">
         <img className="picture" alt={hit.name} src={hit.picture_url} />
         <img
@@ -345,7 +346,9 @@ function HitComponent({ hit }) {
       </div> */}
       <div className="property-date">{hit.listDate}</div>
       <div class="property-image">
-        {hit.photos && <img src={hit.photos[0]} />}
+        {hit.localImages && (
+          <Img fluid={hit.localImages[0].childrenImageSharp[0].fluid} />
+        )}
       </div>
       <div className="property-price-deets">
         <div className="property-price">${hit.listPrice}</div>

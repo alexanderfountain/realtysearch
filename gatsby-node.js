@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+const { createRemoteFileNode } = require("gatsby-source-filesystem")
 
 const path = require("path")
 exports.createPages = async ({ graphql, actions }) => {
