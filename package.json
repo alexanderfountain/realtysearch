@@ -35,7 +35,7 @@
     "react-with-styles": "^4.1.0",
     "rheostat": "^2.2.0",
     "styled-components": "^5.0.0"
-    },
+  },
   "devDependencies": {
     "prettier": "^1.19.1"
   },

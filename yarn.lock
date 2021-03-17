@@ -7650,9 +7650,8 @@
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-"gatsby-plugin-remote-images@^2.4.0":
-  "integrity" "sha512-xf3WC6VvgnzTmf2y5qM9CxSjR3TYRDCNG+UC4Y86rJNgi9DFX1AN3NXJu+o4nc2AFNFItaH/GqttV3KKfNh7cw=="
-  "resolved" "https://registry.npmjs.org/gatsby-plugin-remote-images/-/gatsby-plugin-remote-images-2.4.0.tgz"
+"gatsby-plugin-remote-images@https://github.com/alexanderfountain/gatsby-plugin-remote-images.git":
+  "resolved" "git+ssh://git@github.com/alexanderfountain/gatsby-plugin-remote-images.git#8dc8a055e6fa82912b3d9852da47b01af73cfa9e"
   "version" "2.4.0"
   dependencies:
     "gatsby-source-filesystem" "^2.3.14"
