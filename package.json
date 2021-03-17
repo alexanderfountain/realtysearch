@@ -14,7 +14,7 @@
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.21",
-    "gatsby-plugin-remote-images": "^2.4.0",
+    "gatsby-plugin-remote-images": "https://github.com/alexanderfountain/gatsby-plugin-remote-images.git",
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-source-apiserver": "^2.1.4",
     "gatsby-source-custom-api": "^2.1.4",
@@ -35,7 +35,7 @@
     "react-with-styles": "^4.1.0",
     "rheostat": "^2.2.0",
     "styled-components": "^5.0.0"
-  },
+    },
   "devDependencies": {
     "prettier": "^1.19.1"
   },
