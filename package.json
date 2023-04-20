@@ -15,7 +15,7 @@
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-remote-images": "https://github.com/alexanderfountain/gatsby-plugin-remote-images.git",
-    "gatsby-plugin-sharp": "^2.4.3",
+    "gatsby-plugin-sharp": "^4.25.1",
     "gatsby-source-apiserver": "^2.1.4",
     "gatsby-source-custom-api": "^2.1.4",
     "gatsby-source-filesystem": "^2.1.46",
